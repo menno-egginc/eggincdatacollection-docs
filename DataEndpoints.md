@@ -1,3 +1,29 @@
+# API routes
+
+## All data
+`eggincdatacollection.azurewebsites.net/api/GetAllData`
+
+## Filtered data
+`eggincdatacollection.azurewebsites.net/api/GetFilteredData?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
+
+Filters of the same type work as OR, filters of different type work as AND. 
+Example: to return all rare and epic artifacts:
+`eggincdatacollection.azurewebsites.net/api/GetFilteredData?artifactRarity=rare,epic`
+
+Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is id 0)
+`eggincdatacollection.azurewebsites.net/api/GetFilteredData?artifactLevel=0&shipType=henerprise`
+
+### Available filters
+| Field name | Meaning | Possible values |
+|---|---|---|
+| shipType | Type of ship that was sent | See `Ship types` table, both ids or filtering name can be used |
+| shipDurationType | Duration of ship that was sent | See `Ship duration types` table, both ids or filtering name can be used |
+| targetArtifact | Artifact that was targeted | See `Artifact types` table, both ids or filtering name can be used. Note that ships without a target show up as UNKNOWN |
+| shipLevel | Number of stars the ship has | An integer between 0 and 7 |
+| artifactType | Type of artifact that was dropped | See `Artifact types` table, both ids or filtering name can be used. |
+| artifactRarity | Rarity of artifact that was dropped | See `Artifact rarities` table, both ids or filtering name can be used |
+| artifactLevel | Level/Tier of artifact that was dropped. Note that tier 1 is id 0, tier 2 is id 1, etc | See `Artifact tiers` table, both ids or filtering name can be used
+
 # JSON return format
 ```
 [
@@ -130,28 +156,4 @@
 |  3 | GREATER | Tier 4 | Greater |
 |  4 | SUPERIOR | n/a | Superior |
 
-# API routes
 
-## All data
-`eggincdatacollection.azurewebsites.net/api/GetAllData`
-
-## Filtered data
-`eggincdatacollection.azurewebsites.net/api/GetFilteredData?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
-
-Filters of the same type work as OR, filters of different type work as AND. 
-Example: to return all rare and epic artifacts:
-`eggincdatacollection.azurewebsites.net/api/GetFilteredData?artifactRarity=rare,epic`
-
-Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is id 0)
-`eggincdatacollection.azurewebsites.net/api/GetFilteredData?artifactLevel=0&shipType=henerprise`
-
-### Available filters
-| Field name | Meaning | Possible values |
-|---|---|---|
-| shipType | Type of ship that was sent | See `Ship types` table, both ids or filtering name can be used |
-| shipDurationType | Duration of ship that was sent | See `Ship duration types` table, both ids or filtering name can be used |
-| targetArtifact | Artifact that was targeted | See `Artifact types` table, both ids or filtering name can be used. Note that ships without a target show up as UNKNOWN |
-| shipLevel | Number of stars the ship has | An integer between 0 and 7 |
-| artifactType | Type of artifact that was dropped | See `Artifact types` table, both ids or filtering name can be used. |
-| artifactRarity | Rarity of artifact that was dropped | See `Artifact rarities` table, both ids or filtering name can be used |
-| artifactLevel | Level/Tier of artifact that was dropped. Note that tier 1 is id 0, tier 2 is id 1, etc | See `Artifact tiers` table, both ids or filtering name can be used
