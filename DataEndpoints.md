@@ -3,8 +3,15 @@
 ## All data
 `eggincdatacollection.azurewebsites.net/api/GetAllData`
 
+## All data in CSV format
+`eggincdatacollection.azurewebsties.net/api/GetAllDataCsv`
+
 ## Filtered data
+Json format:
 `eggincdatacollection.azurewebsites.net/api/GetFilteredData?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
+
+CSV format:
+`eggincdatacollection.azurewebsites.net/api/GetFilteredDataCsv?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
 
 Filters of the same type work as OR, filters of different type work as AND. 
 Example: to return all rare and epic artifacts:
@@ -24,7 +31,7 @@ Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is i
 | artifactRarity | Rarity of artifact that was dropped | See `Artifact rarities` table, both ids or filtering name can be used |
 | artifactLevel | Level/Tier of artifact that was dropped. Note that tier 1 is id 0, tier 2 is id 1, etc | See `Artifact tiers` table, both ids or filtering name can be used
 
-# JSON return format
+## JSON return format
 ```
 [
   {
@@ -57,6 +64,13 @@ Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is i
     "totalDrops": 17
   }
 ]
+```
+
+## CSV return format
+```
+Ship type ID,Ship type,Ship duration type ID,Ship duration type,Ship level,Target artifact ID,Target artifact,Artifact type ID,Artifact type,Artifact rarity ID,Artifact rarity,Artifact tier,Total drops
+9,HENERPRISE,2,EPIC,7,10,BOOK_OF_BASAN,4,BEAK_OF_MIDAS,3,LEGENDARY,3,1
+9,HENERPRISE,2,EPIC,7,17,GOLD_METEORITE,12,TUNGSTEN_ANKH,3,LEGENDARY,2,1
 ```
 
 ## Ship types
