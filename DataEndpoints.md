@@ -129,3 +129,11 @@
 |  2 | NORMAL | Tier 3 | Normal |
 |  3 | GREATER | Tier 4 | Greater |
 |  4 | SUPERIOR | n/a | Superior |
+
+# API routes
+
+## All data
+`eggincdatacollection.azurewebsites.net/api/GetAllData`
+
+## Filtered data
+`eggincdatacollection.azurewebsites.net/api/GetFilteredData`
