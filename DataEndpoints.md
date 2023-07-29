@@ -112,3 +112,20 @@
 | 51 | LIFE_STONE_FRAGMENT | Life stone fragment | LifeStoneFragment |
 | 52 | CLARITY_STONE_FRAGMENT | Clarity stone fragment | ClarityStoneFragment |
 | 10000 | UNKNOWN | Unknown / No target | Unknown |
+
+## Artifact rarities
+| id  | API name  | In-game name  | Filtering name |
+|---|---|---|---|
+|  0 | COMMON | Common | Common |
+|  1 | RARE | Rare | Rare |
+|  2 | EPIC | Epic | Epic |
+|  3 | LEGENDARY | Legendary | Legendary |
+
+## Artifact tiers
+| id  | API name  | In-game name  | Filtering name |
+|---|---|---|---|
+|  0 | INFERIOR | Tier 1 | Inferior |
+|  1 | LESSER | Tier 2 | Lesser |
+|  2 | NORMAL | Tier 3 | Normal |
+|  3 | GREATER | Tier 4 | Greater |
+|  4 | SUPERIOR | n/a | Superior |
