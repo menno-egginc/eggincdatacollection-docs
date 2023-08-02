@@ -5,6 +5,8 @@
 
 ## All data in CSV format
 `eggincdatacollection.azurewebsties.net/api/GetAllDataCsv`
+Compact format (IDs only):
+`eggincdatacollection.azurewebsites.net/api/GetAllDataCsvCompact`
 
 ## Filtered data
 Json format:
@@ -12,6 +14,9 @@ Json format:
 
 CSV format:
 `eggincdatacollection.azurewebsites.net/api/GetFilteredDataCsv?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
+
+Compact CSV format:
+`eggincdatacollection.azurewebsites.net/api/GetFilteredDataCsvCompact?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
 
 Filters of the same type work as OR, filters of different type work as AND. 
 Example: to return all rare and epic artifacts:
