@@ -5,6 +5,7 @@
 
 ## All data in CSV format
 `eggincdatacollection.azurewebsties.net/api/GetAllDataCsv`
+
 Compact format (IDs only):
 `eggincdatacollection.azurewebsites.net/api/GetAllDataCsvCompact`
 
