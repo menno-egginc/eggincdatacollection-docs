@@ -3,6 +3,8 @@
 ## All data
 `eggincdatacollection.azurewebsites.net/api/GetAllData`
 
+Artifact parameters excluded by default, use `includeArtifactParameters=true` to include them
+
 ## All data in CSV format
 `eggincdatacollection.azurewebsties.net/api/GetAllDataCsv`
 
@@ -12,6 +14,8 @@ Compact format (IDs only):
 ## Filtered data
 Json format:
 `eggincdatacollection.azurewebsites.net/api/GetFilteredData?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
+
+Artifact parameters excluded by default, use `includeArtifactParameters=true` to include them
 
 CSV format:
 `eggincdatacollection.azurewebsites.net/api/GetFilteredDataCsv?filterName=filtervalue1,filtervalue2&otherfilterName=filtervalue3`
@@ -65,7 +69,13 @@ Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is i
         "id": 0,
         "name": "COMMON"
       },
-      "artifactLevel": 0
+      "artifactLevel": 0,
+/// EXCLUDED BY DEFAULT
+      "artifactParameters": {
+        "baseQuality": 10.9,
+        "oddsMultiplier": 0.0006
+///
+      }
     },
     "totalDrops": 17
   }
