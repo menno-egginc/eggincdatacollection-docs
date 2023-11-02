@@ -6,7 +6,7 @@
 Artifact parameters excluded by default, use `includeArtifactParameters=true` to include them
 
 ## All data in CSV format
-`eggincdatacollection.azurewebsties.net/api/GetAllDataCsv`
+`eggincdatacollection.azurewebsites.net/api/GetAllDataCsv`
 
 Compact format (IDs only):
 `eggincdatacollection.azurewebsites.net/api/GetAllDataCsvCompact`
