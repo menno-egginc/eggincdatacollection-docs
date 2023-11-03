@@ -41,6 +41,10 @@ Example: to return all tier 1 artifacts from henerprise ships (note: tier 1 is i
 | artifactRarity | Rarity of artifact that was dropped | See `Artifact rarities` table, both ids or filtering name can be used |
 | artifactLevel | Level/Tier of artifact that was dropped. Note that tier 1 is id 0, tier 2 is id 1, etc | See `Artifact tiers` table, both ids or filtering name can be used
 
+## Get your own inventory in CSV / JSON format
+`https://eggincdatacollection.azurewebsites.net/api/GetInventoryCsv?eid=EIxxx`
+`https://eggincdatacollection.azurewebsites.net/api/GetInventoryJson?eid=EIxxx`
+
 ## JSON return format
 ```
 [
