@@ -106,6 +106,7 @@ Ship type ID,Ship type,Ship duration type ID,Ship duration type,Ship level,Targe
 |  7 | CHICKFIANT | Defihent | Chickfiant |
 |  8 | VOYEGGER | Voyegger | Voyegger |
 |  9 | HENERPRISE | Henerprise | Henerprise |
+| 10 | ATREGGIES | Atreggies Henliner | Atreggies |
 
 ## Ship duration types
 | id  | API name  | In-game name  | Filtering name |
